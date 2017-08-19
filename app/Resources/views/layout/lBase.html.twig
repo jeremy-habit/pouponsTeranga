@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Les Poupons de la Teranga, Association">
+    <meta name="author" content="Habit Jérémy, Maxime Lainé">
+    <link rel="icon" type="image/x-icon" href="{{ asset('public/icon_logo/favicon.png') }}"/>
+
+    <title>{% block title %}{% endblock %} - Les Poupons de la Teranga, Association</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ asset("public/css/libraries/normalize.min.css") }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset("public/css/libraries/MagicMonkeyCSS.min.css") }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset("public/css/common.css") }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset("public/css/modules/scrollBack.css") }}" type="text/css">
+    {% block css %}{% endblock %}
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script src="{{ asset('public/js/modules/flashBlock.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('public/js/modules/scrollBack.js') }}" type="text/javascript"></script>
+    {% block js %}
+    {% endblock %}
+</head>
+<body>
+
+{# HEADER START #}
+
+{% include 'layout/lHeader.html.twig' %}
+
+{# BODY START #}
+<main>
+    {#FLASH START#}
+    {% if app.session.flashBag.has('success') or app.session.flashBag.has('error') %}
+        <div class="pos-fix padd-15 flashBlock anim-zoom txt-over-breakline">
+            {% for msg in app.session.flashBag.get('success') %}
+                <p class="msg-success marg-0"><span class="txt-b">Ok</span> : {{ msg }}</p>
+            {% endfor %}
+            {% for msg in app.session.flashBag.get('error') %}
+                <p class="msg-error marg-0"><span class="txt-b">Échec</span> : {{ msg }}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {#FLASH END#}
+
+    {# BLOCKPAGE START#}
+    <div class="anim-zoom slow container marg-auto marg-50-top-bottom">
+        {% block body %}
+        {% endblock %}
+    </div>
+    {# BLOCKPAGE END#}
+
+    {# FOOTER START #}
+    {% include 'layout/lFooter.html.twig' %}
+    <a href="#0" class="cd-top" title="Retour en haut de la page">Haut</a>
+</main>
+
+</body>
+</html>

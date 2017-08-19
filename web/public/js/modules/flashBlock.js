@@ -1,0 +1,1 @@
+$(document).ready(function(){var e=$(".flashBlock");e.length&&setTimeout(function(){e.fadeOut(1e3,function(){$(this).remove()})},4e3)});

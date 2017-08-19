@@ -1,0 +1,105 @@
+{% extends "::layout/lBase.html.twig" %}
+
+{% block title %}
+    Accueil
+{% endblock %}
+
+{% block body %}
+
+    {# ### PRESENTATION ---------------------------------------------------------- #}
+    <section class="row flex-y-center flex-x-evenly">
+        <div class="cell-12 align-center-l">
+            <h1 class="color-nephritis">
+                <img class="responsive-img" src="{{ asset('public/iconLogo/history-64.png') }}"
+                     alt="Icône histoire"/>
+                <span class="marg-15-left dis-block-l marg-15-top-l">Notre histoire</span>
+            </h1>
+        </div>
+        <div class="cell-4 c6-m c8-s c12-xs box-shad-2">
+            <img class="responsive-img" src="http://fakeimg.pl/1920x1080/?text=Magic&font=lobster" alt=""/>
+        </div>
+        <div class="cell-6 c8-m c12-xs">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec blandit metus, ac sollicitudin nibh.
+                Cras
+                aliquet egestas velit sit amet laoreet. Proin augue erat, imperdiet sit amet augue quis, ornare lacinia
+                tortor. Morbi ut tincidunt quam, in aliquam risus. Maecenas efficitur fringilla arcu. Class aptent
+                taciti
+                sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In hac habitasse platea
+                dictumst.
+                Quisque in dui lorem. Donec vitae sapien suscipit, lobortis urna eu, porttitor ipsum.</p>
+        </div>
+    </section>
+    <hr class="border-none border-bottom border-silver width-50 marg-50-top-bottom">
+
+    {# ### DONATION ---------------------------------------------------------- #}
+
+    <section class="row-reverse flex-y-center flex-x-evenly">
+        <div class="cell-12 align-center-l">
+            <h1 class="color-sun-flower">
+                <img class="responsive-img" src="{{ asset('public/iconLogo/activity-64.png') }}"
+                     alt="Icône activité"/>
+                <span class="marg-15-left dis-block-l marg-15-top-l">Notre activité</span>
+            </h1>
+        </div>
+        <div class="cell-4 c6-m c8-s c12-xs box-shad-2">
+            <img class="responsive-img" src="http://fakeimg.pl/1920x1080/?text=Magic&font=lobster" alt=""/>
+        </div>
+        <div class="cell-6 c8-m c12-xs">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec blandit metus, ac sollicitudin nibh.
+                Cras
+                aliquet egestas velit sit amet laoreet. Proin augue erat, imperdiet sit amet augue quis, ornare lacinia
+                tortor. Morbi ut tincidunt quam, in aliquam risus. Maecenas efficitur fringilla arcu. Class aptent
+                taciti
+                sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In hac habitasse platea
+                dictumst.
+                Quisque in dui lorem. Donec vitae sapien suscipit, lobortis urna eu, porttitor ipsum.</p>
+        </div>
+    </section>
+    <hr class="border-none border-bottom border-silver width-50 marg-50-top-bottom">
+
+    {# ### GALLERY ---------------------------------------------------------- #}
+    <section class="row flex-x-center">
+        <div class="cell-12 align-center-l">
+            <h1 class="color-alizarin">
+                <img class="responsive-img" src="{{ asset('public/iconLogo/gallery-64.png') }}"
+                     alt="Icône de la galerie photo"/>
+                <span class="marg-15-left dis-block-m marg-15-top-m">Notre galerie photo</span>
+            </h1>
+        </div>
+        <div class="cell-12 c8-l c12-xs">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec blandit metus, ac sollicitudin nibh.
+                Cras
+                aliquet egestas velit sit amet laoreet. Proin augue erat, imperdiet sit amet augue quis, ornare lacinia
+                tortor. Morbi ut tincidunt quam, in aliquam risus : </p>
+        </div>
+        <div class="cell-12">
+            <div class="row-column-s">
+                <div class="cell-4 c6-m">
+                    <img class="responsive-img box-shad-2" src="http://fakeimg.pl/1920x1080/?text=Magic&font=lobster"
+                         alt=""/>
+                </div>
+                <div class="cell-4 c6-m">
+                    <img class="responsive-img box-shad-2" src="http://fakeimg.pl/1920x1080/?text=Monkey&font=lobster"
+                         alt=""/>
+                </div>
+                <div class="cell-4 c6-m">
+                    <img class="responsive-img box-shad-2" src="http://fakeimg.pl/1920x1080/?text=CSS&font=lobster"
+                         alt=""/>
+                </div>
+                <div class="cell-4 c6-m">
+                    <img class="responsive-img box-shad-2" src="http://fakeimg.pl/1920x1080/?text=Magic&font=lobster"
+                         alt=""/>
+                </div>
+                <div class="cell-4 c6-m">
+                    <img class="responsive-img box-shad-2" src="http://fakeimg.pl/1920x1080/?text=Monkey&font=lobster"
+                         alt=""/>
+                </div>
+                <div class="cell-4 c6-m">
+                    <img class="responsive-img box-shad-2" src="http://fakeimg.pl/1920x1080/?text=CSS&font=lobster"
+                         alt=""/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
