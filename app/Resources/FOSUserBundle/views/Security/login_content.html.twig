@@ -1,0 +1,49 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="row">
+    <div class="cell-12-marg-0">
+        <h1 class="align-center color-wet-asphalt txt-size-medium marg-0-top">Connexion</h1>
+    </div>
+</div>
+
+{% if error %}
+    <div class="row">
+        <div class="cell-12">
+            <span class="msg-error">
+                <span class="txt-b">Échec</span>
+                : {{ error.messageKey|trans(error.messageData, 'security') }}
+            </span>
+        </div>
+    </div>
+{% endif %}
+
+<div class="row">
+    <div class="cell-12">
+        <form class="form width-30 width-50-xl width-100-s marg-auto" action="{{ path("fos_user_security_check") }}"
+              method="post">
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token }}"/>
+            <div class="form-content-large">
+                <label for="username">{{ 'security.login.username'|trans }}</label>
+                <input class="padd-5" type="text" id="username" name="_username" value="{{ last_username }}"
+                       required="required"/>
+            </div>
+
+            <div class="form-content-large">
+                <label for="password">{{ 'security.login.password'|trans }}</label>
+                <input class="padd-5" type="password" id="password" name="_password" required="required"/>
+            </div>
+
+            <div class="form-content-align align-center">
+                <input type="checkbox" id="remember_me" name="_remember_me" checked/>
+                <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+            </div>
+
+            <div class="form-content-actions">
+                <input class="bg-nephritis hover-bg-emerald padd-10 border-none color-yang" type="submit" id="_submit" name="_submit"
+                       value="{{ 'security.login.submit'|trans }}"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+
