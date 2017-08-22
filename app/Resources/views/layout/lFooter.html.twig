@@ -1,34 +1,41 @@
-<footer class="bg-yin color-yang padd-50">
-    <div class="row flex-y-center marg-50-top-bottom">
-
-        {# ----- SITE / LOGO #}
-        <div class="cell-6 align-center APP_font_cake txt-size-medium">
-            les poupons de la teranga
-        </div>
+<footer class="row bg-yin color-yang padd-50">
+    <div class="cell-12 align-center">
 
         {# ----- SOCIAL NETWORKS #}
-        <div class="cell-6 align-center">
-            <a href="" title="Retrouvez les poupons de la Teranga sur Facebook !" class="bg-yang dis-inblock">
-                <img class="responsive-img" src="{{ asset('public/iconLogo/facebook-48.png') }}" alt="Logo Facebook"/>
-            </a>
+        <ul class="list-unstyled list-inline marg-30-bottom">
+            <li>
+                <a href="" title="Retrouvez les poupons de la Teranga sur Facebook !" class="bg-yang dis-inblock">
+                    <img class="responsive-img" src="{{ asset('public/iconLogo/facebook-48.png') }}"
+                         alt="Logo Facebook"/>
+                </a>
+            </li>
+        </ul>
+
+        {# ----- SITE / LOGO #}
+        <div class="align-center APP_font_cake txt-size-medium marg-50-bottom">
+            <span>les poupons de la teranga</span>
         </div>
+
+        {# ----- COPYRIGHT #}
+        <ul class="list-unstyled list-inline list-separator list-block-l list-no-separator-l">
+            <li>
+                <span>Tous droits réservés</span>
+                <span class="copyright">Les poupons de la Teranga</span>
+
+            </li>
+            <li>
+                <span>Réalisé par HABIT Jérémy, LAINÉ Maxime</span>
+            </li>
+            <li>
+                <span>{{ "now"|date("Y") }}</span>
+            </li>
+            <li>
+                <a class="color-concrete hover-color-orange" href="#" title="Voir les mentions légales du site">
+                    <span>Mentions légales</span>
+                </a>
+            </li>
+        </ul>
+
     </div>
-    <div class="row">
-        {# ----- Copyright #}
-        <div class="cell-12 align-center">
-            <ul class="list-unstyled list-inline list-separator">
-                <li>
-                    <span>Tous droits réservés</span>
-                    <span class="copyright">Les poupons de la Teranga</span>
-                    <span>- Réalisé par HABIT Jérémy, LAINÉ Maxime</span>
-                    <span>- {{ "now"|date("Y") }}</span>
-                </li>
-                <li>
-                    <a class="color-concrete hover-color-orange" href="#" title="Voir les mentions légales du site">
-                        <span>Mentions légales</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
+
 </footer>
